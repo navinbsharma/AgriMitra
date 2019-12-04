@@ -10,6 +10,9 @@ import android.widget.Button;
 
 public class QueryActivity extends AppCompatActivity {
 
+    LocationGetter latLong = new LocationGetter();
+    String location;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,11 +23,14 @@ public class QueryActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                location = latLong.fetchLocation();
+
+
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 Uri uri = Uri.parse("mailto:navinsharmasuprb@gmail.com");
                 intent.setData(uri);
                 intent.putExtra("subject", "my subject");
-                intent.putExtra("body", "my location");
+                intent.putExtra("body", "my location"+location);
                 startActivity(intent);
             }
         });
