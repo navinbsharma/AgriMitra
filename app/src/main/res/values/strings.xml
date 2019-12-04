@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AgriMitra</string>
+    <string name="app_name">AgroMitra</string>
     <string name="component_Soil">Soil Health Card</string>
     <string name="component_Weather">Weather</string>
     <string name="component_Feedback">Feedback</string>
