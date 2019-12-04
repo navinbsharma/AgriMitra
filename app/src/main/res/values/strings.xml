@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AgriMitra</string>
+    <string name="component_Soil">Soil Health Card</string>
+    <string name="component_Weather">Weather</string>
+    <string name="component_Feedback">Feedback</string>
+    <string name="component_Query">Query</string>
+
+</resources>
