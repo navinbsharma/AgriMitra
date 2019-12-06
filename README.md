@@ -1,2 +1,1 @@
-# AgriMitra
-# This is gonna blow your mind!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Version 1.0
