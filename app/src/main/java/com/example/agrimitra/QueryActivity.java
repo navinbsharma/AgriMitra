@@ -1,40 +1,47 @@
 package com.example.agrimitra;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class QueryActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    LocationGetter latLong = new LocationGetter();
-    String location;
+public class QueryActivity extends AppCompatActivity implements LocationGetterSetter.LocationChangeListener {
+
+    LocationGetterSetter loc;
+    Location location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_query);
 
+        loc = new LocationGetterSetter(getApplicationContext(), QueryActivity.this, this);
+
         Button submit = findViewById(R.id.submit);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                location = latLong.fetchLocation();
 
-
+                String l = "Lat: " + location.getLatitude() + ", Long: " + location.getLongitude();
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 Uri uri = Uri.parse("mailto:navinsharmasuprb@gmail.com");
                 intent.setData(uri);
                 intent.putExtra("subject", "my subject");
-                intent.putExtra("body", "my location"+location);
+                intent.putExtra("body", "My location: " + l);
                 startActivity(intent);
             }
         });
 
 
+    }
+
+    @Override
+    public void onLocationChange(Location location) {
+        this.location = location;
     }
 }

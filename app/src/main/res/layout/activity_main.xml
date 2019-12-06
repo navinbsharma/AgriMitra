@@ -39,11 +39,13 @@
             android:layout_margin="8dp"
             android:background="#ffffff"
             android:scaleType="centerCrop"
-            android:src="@drawable/weather" />
+            android:src="@drawable/problem"
+            />
 
     </LinearLayout>
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
