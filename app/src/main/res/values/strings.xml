@@ -5,4 +5,21 @@
     <string name="component_Feedback">Feedback</string>
     <string name="component_Query">Query</string>
 
+
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="mpin">mPin</string>
+    <string name="confirm_mpin">Confirm mPin</string>
+
+    <string name="phone">Mobile Number</string>
+    <string name="user_name">Name</string>
+    <string name="adhar">Adhar Card Number</string>
+    <string name="login_now">Login Now</string>
+    <string name="sgin_up">SignUp Now</string>
+    <string name="don_t_remember_password">Forgot Remember password?</string>
+    <string name="dont_have_an_account">Don\'t have an account?Signup</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="or">or</string>
+    <string name="already_have_an_account">Already have an account?Login</string>
+
 </resources>

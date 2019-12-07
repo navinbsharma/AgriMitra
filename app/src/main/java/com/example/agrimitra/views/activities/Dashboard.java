@@ -1,13 +1,13 @@
-package com.example.agrimitra;
+package com.example.agrimitra.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import com.example.agrimitra.R;
 
 public class Dashboard extends AppCompatActivity {
 

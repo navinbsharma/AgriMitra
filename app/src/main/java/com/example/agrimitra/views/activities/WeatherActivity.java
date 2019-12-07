@@ -1,14 +1,16 @@
-package com.example.agrimitra;
+package com.example.agrimitra.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MarketActivity extends AppCompatActivity {
+import com.example.agrimitra.R;
+
+public class WeatherActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_market);
+        setContentView(R.layout.activity_weather);
     }
 }

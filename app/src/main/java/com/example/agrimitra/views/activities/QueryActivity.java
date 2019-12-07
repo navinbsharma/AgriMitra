@@ -1,4 +1,4 @@
-package com.example.agrimitra;
+package com.example.agrimitra.views.activities;
 
 import android.content.Intent;
 import android.location.Location;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.agrimitra.R;
+import com.example.agrimitra.views.models.LocationGetterSetter;
 
 public class QueryActivity extends AppCompatActivity implements LocationGetterSetter.LocationChangeListener {
 

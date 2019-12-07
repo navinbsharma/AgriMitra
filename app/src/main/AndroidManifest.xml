@@ -13,30 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".views.activities.Dashboard"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".views.activities.Signup"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/> <!-- <activity android:name=".Login" /> -->
         <activity
-            android:name=".Dashboard"
+            android:name=".views.activities.Login"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity android:name=".LocationGetter" />
-        <activity android:name=".MarketActivity" />
+        <activity android:name=".views.activities.LocationGetter" />
+        <activity android:name=".views.activities.MarketActivity" />
         <activity
-            android:name=".FeedbackActivity"
+            android:name=".views.activities.FeedbackActivity"
             android:label="@string/component_Feedback" />
         <activity
-            android:name=".SoilHealthActivity"
+            android:name=".views.activities.SoilHealthActivity"
             android:label="@string/component_Soil" />
         <activity
-            android:name=".WeatherActivity"
+            android:name=".views.activities.WeatherActivity"
             android:label="@string/component_Weather" />
         <activity
-            android:name=".QueryActivity"
+            android:name=".views.activities.QueryActivity"
             android:label="@string/component_Query" />
     </application>
 

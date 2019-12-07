@@ -1,4 +1,4 @@
-package com.example.agrimitra;
+package com.example.agrimitra.views.models;
 
 import android.Manifest;
 import android.app.Activity;
