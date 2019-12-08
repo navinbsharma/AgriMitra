@@ -29,7 +29,7 @@ public class Dashboard extends AppCompatActivity {
         query.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(Dashboard.this , QueryActivity.class);
+                Intent intent = new Intent(Dashboard.this , QueryChattingActivity.class);
                 startActivity(intent);
             }
         });
