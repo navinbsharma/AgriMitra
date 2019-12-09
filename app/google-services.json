@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "605037665044",
+    "firebase_url": "https://agromitra-2af0b.firebaseio.com",
+    "project_id": "agromitra-2af0b",
+    "storage_bucket": "agromitra-2af0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605037665044:android:c56d38f4574bbe77fa4001",
+        "android_client_info": {
+          "package_name": "com.example.agrimitra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605037665044-5ch5hpbr0oji19lclabkamt0hencrsqm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agrimitra",
+            "certificate_hash": "778160a88174462b8da66bbe469382eddebcd363"
+          }
+        },
+        {
+          "client_id": "605037665044-i9878n74l842k96590vf07ud46fiieip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJZBYNcB0NyKO-RPsZ5-Hfmk0zU4ugvyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605037665044-i9878n74l842k96590vf07ud46fiieip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
