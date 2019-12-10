@@ -16,10 +16,11 @@
     <string name="adhar">Adhar Card Number</string>
     <string name="login_now">Login Now</string>
     <string name="sgin_up">SignUp Now</string>
-    <string name="don_t_remember_password">Forgot Remember password?</string>
+    <string name="don_t_remember_password">Forgot password?</string>
     <string name="dont_have_an_account">Don\'t have an account?Signup</string>
     <string name="sign_in_with_facebook">Sign in with Facebook</string>
     <string name="or">or</string>
+    <string name="request_soil_card">Request New Soil Health Crard</string>
     <string name="already_have_an_account">Already have an account?Login</string>
 
     <!-- TODO: Remove or change this placeholder text -->

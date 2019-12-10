@@ -136,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
-                    android:text="Weather"
+                    android:text="Market"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -203,7 +203,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Weather"
+                    android:text="feedback"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -242,7 +242,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Query"
+                    android:text="Tutorial"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"

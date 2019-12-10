@@ -16,7 +16,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-public class LocationGetterSetter {
+public class  LocationGetterSetter {
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
     //   Context context = this;
     String user_location;
@@ -94,10 +94,10 @@ public class LocationGetterSetter {
                             // Got last known location. In some rare situations this can be null.
                             if (location != null) {
                                 // Logic to handle location object
-                                Double latittude = location.getLatitude();
+                                Double latitude = location.getLatitude();
                                 Double longitude = location.getLongitude();
 
-                                user_location = "Latitude = " + latittude + "\nLongitude = " + longitude;
+                                user_location = "Latitude = " + latitude + "\nLongitude = " + longitude;
                                 locationChangeListener.onLocationChange(location);
                             }
                         }
