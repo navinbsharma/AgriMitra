@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:background="@drawable/et_bg"
-        android:hint="Phone Number"
+        android:hint="Mobile Number"
         android:inputType="textEmailAddress"
         android:padding="16dp"
         android:textColorHint="@color/login_form_details"
