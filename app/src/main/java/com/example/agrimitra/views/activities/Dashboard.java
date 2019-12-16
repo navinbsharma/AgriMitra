@@ -25,6 +25,7 @@ public class Dashboard extends AppCompatActivity {
         ImageView feedback =  findViewById(R.id.feedback);
         ImageView soil =  findViewById(R.id.soilcard);
         ImageView market =  findViewById(R.id.market);
+        ImageView tutorial =  findViewById(R.id.tutorial);
 
         query.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -62,6 +63,13 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(Dashboard.this , MarketActivity.class);
+                startActivity(intent);
+            }
+        });
+        tutorial.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Dashboard.this , Tutorials.class);
                 startActivity(intent);
             }
         });

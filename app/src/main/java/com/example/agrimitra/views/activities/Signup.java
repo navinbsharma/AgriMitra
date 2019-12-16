@@ -11,12 +11,22 @@ import android.widget.TextView;
 import com.example.agrimitra.R;
 
 public class Signup extends AppCompatActivity {
-
+    Button b;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        b = findViewById(R.id.btn_signup);
 
-        }
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i = new Intent(Signup.this, Login.class);
+                startActivity(i);
+            }
+        });
+
     }
+}
