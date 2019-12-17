@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AgroMitra</string>
-    <string name="welcome_page">Welcome</string>
-    <string name="component_Soil">Soil Health Card</string>
-    <string name="component_Weather">Weather</string>
-    <string name="component_Feedback">Feedback</string>
-    <string name="component_Query">Query</string>
+    <string name="app_name">एग्रोमित्र</string>
+    <string name="welcome_page">स्वागत हे</string>
+    <string name="component_Soil">मिट्टी स्वास्थ्य पत्र</string>
+    <string name="component_Weather">मौसम</string>
+    <string name="component_Feedback">प्रतिक्रिया</string>
+    <string name="component_Query">सवाल</string>
 
 
-    <string name="email_address">Email address</string>
-    <string name="password">Password</string>
-    <string name="mpin">mPin</string>
-    <string name="confirm_mpin">Confirm mPin</string>
+    <string name="email_address">ईमेल पता</string>
+    <string name="password">पारण शब्द</string>
+    <string name="mpin">एम पिन</string>
+    <string name="confirm_mpin">एम पिन की पुष्टि करें</string>
 
     <string name="phone">Mobile Number</string>
     <string name="user_name">Name</string>
