@@ -25,6 +25,7 @@
             android:name=".views.activities.Signup"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- <activity android:name=".Login" /> -->
         <activity
+            android:screenOrientation="portrait"
             android:name=".views.activities.SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
