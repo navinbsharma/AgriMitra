@@ -54,7 +54,7 @@ public class Dashboard extends AppCompatActivity {
         weather.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(Dashboard.this , WeatherActivity.class);
+                Intent intent = new Intent(Dashboard.this , WeatherShowActivity.class);
                 startActivity(intent);
             }
         });
