@@ -59,7 +59,7 @@ public class WeatherShowActivity extends AppCompatActivity {
         mCityLabel = (TextView) findViewById(R.id.locationTV);
         mWeatherImage = (ImageView) findViewById(R.id.weatherSymbolIV);
         mTemperatureLabel = (TextView) findViewById(R.id.tempTV);
-        ImageButton changeCityButton = (ImageButton) findViewById(R.id.changeCityButton);
+       /* ImageButton changeCityButton = (ImageButton) findViewById(R.id.changeCityButton)*/;
 
         // TODO: Add an OnClickListener to the changeCityButton here:
     }
