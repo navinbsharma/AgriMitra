@@ -5,15 +5,17 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg_1"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".views.activities.FeedbackActivity">
-    <RelativeLayout
+    <LinearLayout
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textGrid"
@@ -24,5 +26,169 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </RelativeLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/text_feedback"
+            android:text="We would like your feedback to improve our work"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="What is your opinion about our work??"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#000000">
+
+        </TextView>
+
+    </LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+    <com.hsalf.smilerating.SmileRating
+        android:id="@+id/smile_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+    <View
+        android:id="@+id/footer_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="10dp"
+        android:background="#B5B5B5"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Please select your feedback categoery below"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:textColor="#000000"></TextView>
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box"
+        android:text="Suggestion"
+        android:textAlignment="center"
+        android:textAllCaps="false">
+
+    </Button>
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box"
+            android:text="Compliment"
+            android:textAlignment="center"
+            android:textAllCaps="false">
+
+        </Button>
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box"
+        android:text="Other"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:focusable="true">
+
+    </Button>
+
+</LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#B5B5B5" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Please leave your feedback below"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_gravity="start"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/commentbox">
+
+        </EditText>
+
+    </LinearLayout>
 </LinearLayout>
