@@ -41,8 +41,6 @@ public class WeatherShowActivity extends AppCompatActivity {
     String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
 
 
-
-
     // Member Variables:
     TextView mCityLabel;
     ImageView mWeatherImage;
@@ -53,10 +51,6 @@ public class WeatherShowActivity extends AppCompatActivity {
     LocationListener mLocationListener;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,14 +59,14 @@ public class WeatherShowActivity extends AppCompatActivity {
         mCityLabel = (TextView) findViewById(R.id.locationTV);
         mWeatherImage = (ImageView) findViewById(R.id.weatherSymbolIV);
         mTemperatureLabel = (TextView) findViewById(R.id.tempTV);
-        //LOCAImageButton changeCityButton = (ImageButton) findViewById(R.id.changeCityButton);
+       /* ImageButton changeCityButton = (ImageButton) findViewById(R.id.changeCityButton)*/;
 
         // TODO: Add an OnClickListener to the changeCityButton here:
     }
 
     // TODO: Add onResume() here:
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         Log.d("Agromitra", "onResume: ");
         Log.d("AgromMItra", "Getting weather location");
@@ -80,114 +74,101 @@ public class WeatherShowActivity extends AppCompatActivity {
     }
 
 
-
     // TODO: Add getWeatherForNewCity(String city) here:
 
 
-
-
     // TODO: Add getWeatherForCurrentLocation() here:
-    private void getWeatherForCurrentLocation(){
-        Log.d("AgroMitra", "getWeatherForCurrentLocation: Inside");
-        mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        mLocationListener = new LocationListener(){
-            @Override
-            public void onLocationChanged(Location location) {
-
-                String latitude = String.valueOf(location.getLatitude());
-                String longitude = String.valueOf(location.getLongitude());
-
-                Log.d("AgroMitra", "onLocationChanged: "+latitude+""+longitude);
-
-                RequestParams params = new RequestParams();
-                params.put("lat",latitude);
-                params.put("lon",longitude);
-                params.put("appid",APP_ID);
-                letsDoSomeNetworking(params);
-
-            }
-
-            @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-
-            }
-
-            @Override
-            public void onProviderEnabled(String provider) {
-
-            }
-
-            @Override
-            public void onProviderDisabled(String provider) {
-
-            }
-
-
-        };
-
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+    private void getWeatherForCurrentLocation() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
-            return;
 
+        } else {
+
+            mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            mLocationListener = new LocationListener() {
+
+                @Override
+                public void onLocationChanged(Location location) {
+                    String latitude = String.valueOf(location.getLatitude());
+                    String longitude = String.valueOf(location.getLongitude());
+
+                    Log.d("AgroMitra", "onLocationChanged: " + latitude + "" + longitude);
+
+                    RequestParams params = new RequestParams();
+                    params.put("lat", latitude);
+                    params.put("lon", longitude);
+                    params.put("appid", APP_ID);
+                    letsDoSomeNetworking(params);
+
+                }
+
+                @Override
+                public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                }
+
+                @Override
+                public void onProviderEnabled(String provider) {
+
+                }
+
+                @Override
+                public void onProviderDisabled(String provider) {
+
+                }
+            };
+
+            mLocationManager.requestLocationUpdates(LOCATION_PROVIDER, MIN_TIME, MIN_DISTANCE, mLocationListener);
         }
-        mLocationManager.requestLocationUpdates(LOCATION_PROVIDER,MIN_TIME,MIN_DISTANCE,mLocationListener);
-        mLocationManager.requestLocationUpdates(LOCATION_PROVIDER, 0, 0, mLocationListener);
-        mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, mLocationListener);
-
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if(requestCode == REQUEST_CODE){
+        if (requestCode == REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Log.d("AgroMitra", "onRequestPermissionsResult: Granted ");
                 getWeatherForCurrentLocation();
-            }
-            else{
+            } else {
                 Log.d("AgroMitra", "onRequestPermissionsResult: PermissionDenaid");
             }
         }
     }
 
-// TODO: Add letsDoSomeNetworking(RequestParams params) here:
-    private void letsDoSomeNetworking(RequestParams params){
+    // TODO: Add letsDoSomeNetworking(RequestParams params) here:
+    private void letsDoSomeNetworking(RequestParams params) {
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(WEATHER_URL,params,new JsonHttpResponseHandler(){
+        client.get(WEATHER_URL, params, new JsonHttpResponseHandler() {
 
             @Override
-            public void onSuccess(int statusCode, Header[] headers,JSONObject response){
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 Log.d("AgroMitra", "OnSuccess : OnSuccess");
-                Log.d("AgroMitra", "onSuccess: "+response.toString());
+                Log.d("AgroMitra", "onSuccess: " + response.toString());
 
                 WeatherDataModel weatherData = WeatherDataModel.fromJSON(response);
                 updateUI(weatherData);
             }
 
             @Override
-            public void onFailure(int statusCode, Header[] headers,Throwable e,JSONObject response){
-                Log.d("AgroMitra", "onFailure: "+e.toString());
+            public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
+                Log.d("AgroMitra", "onFailure: " + e.toString());
 
             }
         });
     }
 
 
-
     // TODO: Add updateUI() here:
-    public void updateUI(WeatherDataModel weatherData){
+    public void updateUI(WeatherDataModel weatherData) {
         mCityLabel.setText(weatherData.getmCity());
         mTemperatureLabel.setText(weatherData.getmTemperature());
-        int resourseID = getResources().getIdentifier(weatherData.getmIconName(),"drawable",getPackageName());
+        int resourseID = getResources().getIdentifier(weatherData.getmIconName(), "drawable", getPackageName());
         mWeatherImage.setImageResource(resourseID);
     }
 
 
-
     // TODO: Add onPause() here:
-
 
 
 }

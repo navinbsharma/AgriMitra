@@ -34,5 +34,40 @@
     <string name="back_button_description">Dismiss Change City Screen</string>
     <string name="get_weather">Change City</string>
     <string name="default_query">Enter city name</string>
+    <string name="feedback_heading"> We would like your feedback to improve our work</string>
+    <string name="feeback_experince">What is your opinion about our work??</string>
+    <string name="feedback_category">Please select your feedback categoery below</string>
+    <string name="feedback">Please leave your feedback below</string>
+
+    <string-array name="states">
+        <item>Andra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerela</item>
+        <item>Madya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telagana</item>
+        <item>Tripura</item>
+        <item>Uttaranchal</item>
+        <item>Uttar Pradesh</item>
+        <item>West Bengal</item>
+    </string-array>
 
 </resources>
