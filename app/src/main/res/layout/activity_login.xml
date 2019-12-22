@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent" />
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/login_mobile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/icon" />
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/login_mpin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -56,7 +56,7 @@
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/login_mobile" />
     <Button
         android:id="@+id/btn_login"
         android:layout_width="0dp"
@@ -68,7 +68,7 @@
         android:textColor="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@id/login_mpin" />
     <TextView
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
@@ -80,7 +80,6 @@
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/btn_login" />
-
     <View
         android:id="@+id/footer_line"
         android:layout_width="0dp"
