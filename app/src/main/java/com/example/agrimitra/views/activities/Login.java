@@ -9,8 +9,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
-
-
+import rx.subscriptions.CompositeSubscription;
 
 
 import android.content.Intent;
@@ -38,7 +37,7 @@ public class Login extends AppCompatActivity {
 
 
     @Override
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
     }
 
@@ -49,11 +48,6 @@ public class Login extends AppCompatActivity {
 
         Retrofit retrofitClient = RetroClient.getInstance();
         iMyService = retrofitClient.create(IMyService.class);
-
-
-
-
-
 
 
         viewSetter();
@@ -70,7 +64,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                loginUser(mobileNoView.toString(),mpinNoView.toString());
+                loginUser(mobileNoView.toString(), mpinNoView.toString());
 
 //                i = new Intent(Login.this, Dashboard.class);
 //                startActivity(i);
@@ -81,21 +75,20 @@ public class Login extends AppCompatActivity {
     }
 
     private void loginUser(String mobile, String mpin) {
-        if (TextUtils.isEmpty(mobile)){
+        if (TextUtils.isEmpty(mobile)) {
             Toast.makeText(Login.this, "Please insert a mobile number", Toast.LENGTH_SHORT);
             return;
-        } else if(TextUtils.isEmpty(mpin)) {
+        } else if (TextUtils.isEmpty(mpin)) {
             Toast.makeText(Login.this, "Please insert a mobile number", Toast.LENGTH_SHORT);
             return;
         }
 
-        compositeDisposable.add(iMyService.loginUser(mobile,mpin)
+        compositeDisposable.add(iMyService.loginUser(mobile, mpin)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<String>() {
                     @Override
                     public void accept(String response) throws Exception {
-                        Toast.makeText(Login.this,""+response,Toast.LENGTH_SHORT);
-
+                        Toast.makeText(Login.this, "" + response, Toast.LENGTH_SHORT);
                     }
                 }));
 
