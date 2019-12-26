@@ -70,4 +70,25 @@
         <item>West Bengal</item>
     </string-array>
 
+    <string-array name="Andra_Pradesh">
+        <item>Visakhapatnam</item>
+        <item>Chittoor</item>
+        <item>Vijaywada</item>
+        <item>Amaravati</item>
+        <item>Tirupati</item>
+        <item>Nagarjuna Sagar</item>
+        <item>Nellore</item>
+        <item>Nagarjunakonda</item>
+        <item>Puttaparthi</item>
+        <item>Lepakshi</item>
+        <item>Guntur</item>
+        <item>Adoni</item>
+        <item>Anantapur</item>
+        <item>Cuddapah</item>
+        <item>Eluru</item>
+        <item>Kothagudem</item>
+        <item>Kurnool</item>
+        <item>Srikakulam</item>
+    </string-array>
+
 </resources>
