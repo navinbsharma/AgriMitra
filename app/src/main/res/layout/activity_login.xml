@@ -31,7 +31,8 @@
         app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent" />
-    <TextView
+
+    <EditText
         android:id="@+id/login_mobile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -40,18 +41,21 @@
         android:hint="Mobile Number"
         android:inputType="textEmailAddress"
         android:padding="16dp"
+        android:maxLength="10"
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/icon" />
-    <TextView
+
+    <EditText
         android:id="@+id/login_mpin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/et_bg"
         android:hint="mpin"
-        android:inputType="textPassword"
+        android:maxLength="10"
+        android:inputType="numberPassword"
         android:padding="16dp"
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"

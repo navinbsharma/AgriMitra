@@ -38,7 +38,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <EditText
             android:id="@+id/username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -46,12 +46,13 @@
             android:background="@drawable/et_bg"
             android:hint="@string/user_name"
             android:padding="16dp"
+            android:maxLength="25"
             android:textColorHint="@color/login_form_details"
             app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintStart_toStartOf="@id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/icon" />
 
-        <TextView
+        <EditText
             android:id="@+id/phone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -59,12 +60,13 @@
             android:background="@drawable/et_bg"
             android:hint="@string/phone"
             android:padding="16dp"
+            android:maxLength="10"
             android:textColorHint="@color/login_form_details"
             app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintStart_toStartOf="@id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/username" />
 
-        <TextView
+        <EditText
             android:id="@+id/adhar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -72,12 +74,13 @@
             android:background="@drawable/et_bg"
             android:hint="@string/adhar"
             android:padding="16dp"
+            android:maxLength="20"
             android:textColorHint="@color/login_form_details"
             app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintStart_toStartOf="@id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/phone" />
 
-        <TextView
+            <EditText
             android:id="@+id/mpin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -85,19 +88,21 @@
             android:background="@drawable/et_bg"
             android:hint="@string/mpin"
             android:inputType="numberPassword"
+            android:maxLength="10"
             android:padding="16dp"
             android:textColorHint="@color/login_form_details"
             app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintStart_toStartOf="@id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/adhar" />
 
-        <TextView
+        <EditText
             android:id="@+id/confirm_pin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/et_bg"
             android:hint="@string/confirm_mpin"
+            android:maxLength="10"
             android:inputType="numberPassword"
             android:padding="16dp"
             android:textColorHint="@color/login_form_details"

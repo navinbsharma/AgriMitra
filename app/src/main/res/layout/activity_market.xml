@@ -48,15 +48,18 @@
             android:entries="@array/Andra_Pradesh" />
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_height="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Submit"
+            android:background="@drawable/box">
+
+        </Button>
 
 
     </LinearLayout>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true">
 
-</LinearLayout>
+
 
 </RelativeLayout>
