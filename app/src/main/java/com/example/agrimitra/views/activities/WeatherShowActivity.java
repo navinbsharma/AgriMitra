@@ -18,13 +18,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.agrimitra.R;
-import com.example.agrimitra.views.WeatherDataModel;
+import com.example.agrimitra.views.models.WeatherDataModel;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpRequest;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.json.JSONObject;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class WeatherShowActivity extends AppCompatActivity {
 
@@ -40,11 +45,16 @@ public class WeatherShowActivity extends AppCompatActivity {
     // TODO: Set LOCATION_PROVIDER here:
     String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
 
+    SimpleDateFormat simpleDateFormat;
+
 
     // Member Variables:
     TextView mCityLabel;
     ImageView mWeatherImage;
-    TextView mTemperatureLabel;
+    TextView mTemperatureLabel , mMinTemperature, mMaxTemperature;
+    TextView mUpdatedTime , mStatus;
+    TextView mSunrise, mSunset;
+    TextView mWind , mPressure , mHumidity;
 
     // TODO: Declare a LocationManager and a LocationListener here:
     LocationManager mLocationManager;
@@ -56,15 +66,31 @@ public class WeatherShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_show);
 
-        mCityLabel = (TextView) findViewById(R.id.locationTV);
-        mWeatherImage = (ImageView) findViewById(R.id.weatherSymbolIV);
-        mTemperatureLabel = (TextView) findViewById(R.id.tempTV);
+        mCityLabel = (TextView) findViewById(R.id.address);
+        //mWeatherImage = (ImageView) findViewById(R.id.weatherSymbolIV);
+        mTemperatureLabel = (TextView) findViewById(R.id.temp);
+        mMinTemperature = (TextView) findViewById(R.id.temp_min);
+        mMaxTemperature = (TextView) findViewById(R.id.temp_max);
+
+        //Status of atmostphere
+        mStatus = (TextView) findViewById(R.id.status);
+        mWind = (TextView) findViewById(R.id.wind);
+        mPressure = (TextView) findViewById(R.id.pressure);
+        mHumidity = (TextView) findViewById(R.id.humidity);
+
+        //Time View
+        mUpdatedTime = (TextView) findViewById(R.id.updated_at);
+        mSunrise = (TextView) findViewById(R.id.sunrise);
+        mSunset = (TextView) findViewById(R.id.sunset);
+
+        Log.d("agromitra", "onCreate: Hello");
+
        /* ImageButton changeCityButton = (ImageButton) findViewById(R.id.changeCityButton)*/;
 
         // TODO: Add an OnClickListener to the changeCityButton here:
     }
 
-    // TODO: Add onResume() here:
+    // TODO: Add onResume() here:COmpo
     @Override
     protected void onResume() {
         super.onResume();
@@ -89,6 +115,7 @@ public class WeatherShowActivity extends AppCompatActivity {
 
                 @Override
                 public void onLocationChanged(Location location) {
+                    Log.d("agromitra", "onLocationChanged: ");
                     String latitude = String.valueOf(location.getLatitude());
                     String longitude = String.valueOf(location.getLongitude());
 
@@ -119,6 +146,8 @@ public class WeatherShowActivity extends AppCompatActivity {
             };
 
             mLocationManager.requestLocationUpdates(LOCATION_PROVIDER, MIN_TIME, MIN_DISTANCE, mLocationListener);
+            mLocationManager.requestLocationUpdates(LOCATION_PROVIDER, 0, 0, mLocationListener);
+            mLocationManager.requestLocationUpdates(mLocationManager.NETWORK_PROVIDER, 0,0, mLocationListener);
         }
     }
 
@@ -161,10 +190,48 @@ public class WeatherShowActivity extends AppCompatActivity {
 
     // TODO: Add updateUI() here:
     public void updateUI(WeatherDataModel weatherData) {
+        SimpleDateFormat formatter;
+        Log.d("Agromitra", "updateUI: "+weatherData.getHumidity()+" "+weatherData.getDt());
+
+        formatter = new SimpleDateFormat("dd MMMM yyyy, h:mm a");
+        long dt = weatherData.getDt();
+        String todayDate = formatter.format(new Date(dt * 1000));
+        mUpdatedTime.setText(todayDate);
+        Log.d("Agromitra", "updateUI: "+todayDate);
+
+        formatter = new SimpleDateFormat("h:mm a");
+        long sunRise = weatherData.getSunrise();
+        String sunRiseTime = formatter.format(new Date(sunRise * 1000));
+        mSunrise.setText(sunRiseTime);
+        Log.d("Agromitra", "updateUI: "+sunRiseTime);
+
+        long sunSet = weatherData.getSunset();
+        String sunSetTime = formatter.format(new Date(sunSet * 1000));
+        mSunset.setText(sunSetTime);
+        Log.d("Agromitra", "updateUI: "+sunSetTime);
+
+
+
+
+
+
         mCityLabel.setText(weatherData.getmCity());
-        mTemperatureLabel.setText(weatherData.getmTemperature());
-        int resourseID = getResources().getIdentifier(weatherData.getmIconName(), "drawable", getPackageName());
-        mWeatherImage.setImageResource(resourseID);
+
+        //Temperature Setting
+        mTemperatureLabel.setText(weatherData.getmTemperature()+" C");
+        mMinTemperature.setText("Min temp :"+weatherData.getMinTemp()+" C");
+        mMaxTemperature.setText("Max temp :"+weatherData.getMaxTemp()+" C");
+
+        //STATUS
+
+        mWind.setText(weatherData.getWindSpeed());
+        mStatus.setText(weatherData.getStatus());
+        mPressure.setText(weatherData.getPressure());
+        mHumidity.setText(weatherData.getHumidity());
+
+
+        //int resourseID = getResources().getIdentifier(weatherData.getmIconName(), "drawable", getPackageName());
+        //mWeatherImage.setImageResource(resourseID);
     }
 
 
