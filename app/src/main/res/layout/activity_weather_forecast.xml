@@ -37,12 +37,15 @@
         </LinearLayout>
 
 
+
+
         <LinearLayout
             android:id="@+id/overviewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_below="@+id/addressContainer">
 
             <TextView
                 android:id="@+id/status"
@@ -83,6 +86,131 @@
                     android:layout_height="wrap_content"
                     android:text="Max Temp: 05:05 PM" />
             </LinearLayout>
+
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_below="@id/overviewContainer"
+            android:id="@+id/space_over_forecast"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space_over_forecast">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        android:tint="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/at_time_one_degree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="29°C"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/at_time_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6:45 PM"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunset"
+                        android:tint="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:id="@+id/at_time_two_degree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="29°C"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/at_time_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6:45 PM"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/wind"
+                        android:tint="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:id="@+id/at_time_three_degree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="29°C"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/at_time_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6:45 PM"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </LinearLayout>
+
 
         </LinearLayout>
 

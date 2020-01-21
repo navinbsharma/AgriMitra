@@ -38,6 +38,10 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://172.17.20.35:3000")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
 
         setView();
@@ -52,10 +56,8 @@ public class Login extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.137.44:3000")
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
+                Log.d("login", "onClick: ");
+
 
                 FarmerLoginAPi loginAPi = retrofit.create(FarmerLoginAPi.class);
 
@@ -65,34 +67,47 @@ public class Login extends AppCompatActivity {
                         String mobileNo = mobile.getText().toString();
                         String mPin = mpin.getText().toString();
 
+                        if(mobileNo.length() != 10){
+                            Toast.makeText(Login.this,"Mobile number can be only of 10 digit",Toast.LENGTH_LONG).show();
+                        } else if(mPin.length() != 4){
+                            Toast.makeText(Login.this,"MPin must be only of four digit!",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            call = loginAPi.login(mobileNo , mPin);
+                            call.enqueue(new Callback<FarmerLogin>() {
+                                @Override
+                                public void onResponse(Call<FarmerLogin> call, Response<FarmerLogin> response) {
+                                    if(response.code() == 200 && response.isSuccessful()){
+                                        int code = Integer.parseInt(response.body().getCode());
 
-                        call = loginAPi.login(mobileNo , mPin);
-                        call.enqueue(new Callback<FarmerLogin>() {
-                            @Override
-                            public void onResponse(Call<FarmerLogin> call, Response<FarmerLogin> response) {
-                                if(response.code() == 200 && response.isSuccessful()){
-                                    String code = response.body().getCode();
-                                    Log.d("Agromitra", "onResponse:"+code);
-                                    Toast.makeText(Login.this, "Successful login", Toast.LENGTH_LONG).show();
-                                    Intent intent  = new Intent(Login.this , Dashboard.class);
-                                    startActivity(intent);
+                                        if(code == 200){
+                                            Toast.makeText(Login.this,response.body().getStatus(),Toast.LENGTH_LONG).show();
+                                            Intent intent  = new Intent(Login.this , Dashboard.class);
+                                            startActivity(intent);
+                                        }
+                                        else if(code == 303){
+                                            Toast.makeText(Login.this,response.body().getStatus(),Toast.LENGTH_LONG).show();
+
+                                        } else if(code == 301){
+                                            Toast.makeText(Login.this,response.body().getStatus(),Toast.LENGTH_LONG).show();
+                                        }
+
+                                        Log.d("Agromitra", "onResponse:"+code);
+
+                                    }
                                 }
-                            }
 
-                            @Override
-                            public void onFailure(Call<FarmerLogin> call, Throwable t) {
+                                @Override
+                                public void onFailure(Call<FarmerLogin> call, Throwable t) {
 
-                            }
-                        });
+                                }
+                            });
+                        }
                     }
 
                 });
-
-
             }
         });
-
-
     }
 
     private void setView(){
@@ -101,6 +116,4 @@ public class Login extends AppCompatActivity {
         signUp = findViewById(R.id.txtSignUp);
         submit = findViewById(R.id.btn_login);
     }
-
-
 }

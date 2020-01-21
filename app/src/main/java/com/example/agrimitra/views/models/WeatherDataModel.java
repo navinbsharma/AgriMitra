@@ -15,6 +15,8 @@ public class WeatherDataModel {
 
     // TODO: Declare the member variables here
 
+    int count;
+
     String mCity;
     long dt;
 
@@ -46,6 +48,10 @@ public class WeatherDataModel {
 
         WeatherDataModel weatherData = new WeatherDataModel();
         try {
+
+
+
+
 
             //CITY AND COUNTRY NAME
             weatherData.mCity = response.getString("name") + ", " + response.getJSONObject("sys").getString("country") ;
@@ -112,7 +118,7 @@ public class WeatherDataModel {
 //    }
 
     public Long getDt() {
-        Log.d("Agromitra", "getDt: "+dt);
+        Log.d( "Agromitra", "getDt: "+dt);
         return dt;
     }
     public String getStatus() {

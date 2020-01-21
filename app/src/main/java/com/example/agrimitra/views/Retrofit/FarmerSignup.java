@@ -6,38 +6,17 @@ public class FarmerSignup {
 
     private String id;
 
-    @SerializedName("mobile")
-    private String mobileNo;
+    @SerializedName("status")
+    private String status;
 
-    @SerializedName("name")
-    private String name;
+    @SerializedName("code")
+    private int code;
 
-    @SerializedName("mpin")
-    private String mpin;
-
-    @SerializedName("adhar")
-    private String adhar;
-
-    public String getId() {
-        return id;
+    public String getStatus() {
+        return status;
     }
 
-    public String getMobileNo() {
-        return mobileNo;
+    public int getCode() {
+        return code;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getMpin() {
-        return mpin;
-    }
-
-    public String getAdhar() {
-        return adhar;
-    }
-
-
-
 }

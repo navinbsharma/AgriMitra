@@ -14,13 +14,13 @@
         android:roundIcon="@mipmap/app_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.activities.WeatherShowActivity"></activity>
+        <activity android:name=".views.activities.WeatherForecastActivity"></activity>
+        <activity android:name=".views.activities.WeatherShowForecasat" />
+        <activity android:name=".views.activities.WeatherShowActivity" />
         <activity android:name=".views.activities.QueryChattingActivity" />
         <activity
             android:name=".views.activities.Login"
-            android:theme="@style/AppTheme">
-
-        </activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".views.activities.Dashboard"
             android:theme="@style/AppTheme">
@@ -29,20 +29,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".views.activities.Signup"
             android:theme="@style/AppTheme" /> <!-- <activity android:name=".Login" /> -->
         <activity
-            android:screenOrientation="portrait"
             android:name=".views.activities.SplashScreen"
-            android:theme="@style/AppTheme">
-
-
-
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity android:name=".views.activities.LocationGetter" />
         <activity android:name=".views.activities.MarketActivity" />
         <activity

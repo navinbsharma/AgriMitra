@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.agrimitra.R;
+import com.example.agrimitra.views.models.WeatherForecast;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -54,7 +55,7 @@ public class Dashboard extends AppCompatActivity {
         weather.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(Dashboard.this , WeatherShowActivity.class);
+                Intent intent = new Intent(Dashboard.this , WeatherForecastActivity.class);
                 startActivity(intent);
             }
         });
