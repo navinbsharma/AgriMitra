@@ -49,11 +49,12 @@ public class Login extends AppCompatActivity {
             }
         });
 
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.137.44:3000")
+                        .baseUrl("http:// 192.168.43.198:3000")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 

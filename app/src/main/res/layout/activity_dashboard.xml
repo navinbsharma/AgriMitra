@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
@@ -16,18 +15,17 @@
         android:layout_height="0dp">
 
         <TextView
-            android:id="@+id/textGrid"
+            android:id="@+id/textGrid_dashboard"
             android:text="@string/welcome_page"
             android:textStyle="bold"
             android:textSize="35sp"
             android:textColor="@android:color/white"
             android:layout_centerInParent="true"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <GridLayout
-        android:id="@+id/mainGrid"
+        android:id="@+id/mainGrid_dashboard"
         android:columnCount="2"
         android:rowCount="3"
         android:alignmentMode="alignMargins"
@@ -36,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="14dp">
+
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -46,6 +45,7 @@
             android:layout_marginRight="16dp"
             app:cardCornerRadius="10dp"
             android:background = "@android:color/white">
+
             <ImageView
                 android:id="@+id/weather"
                 android:src="@drawable/weather"
@@ -54,11 +54,11 @@
                 android:layout_height="wrap_content" />
 
             <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <!--<TextView
                 android:text="Weather"
@@ -110,6 +110,8 @@
 
 
         </androidx.cardview.widget.CardView>
+
+        <!--row 2 -->
 
 
         <androidx.cardview.widget.CardView
@@ -163,13 +165,14 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <ImageView
+
+                  <ImageView
                     android:id="@+id/soilcard"
                     android:src="@drawable/soilcard"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <TextView
+                  <TextView
                     android:text="Soil Card"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
@@ -177,7 +180,7 @@
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-            </LinearLayout>
+             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -255,9 +258,6 @@
 
             </LinearLayout>
 
-
         </androidx.cardview.widget.CardView>
-
-
     </GridLayout>
 </LinearLayout>

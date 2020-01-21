@@ -41,7 +41,7 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.43.62:3000")
+                .baseUrl("http:// 192.168.43.198:3000")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         FarmerSignupApi signupApi = retrofit.create(FarmerSignupApi.class);

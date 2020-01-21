@@ -84,6 +84,7 @@
         android:hint="@string/mpin"
         android:inputType="numberPassword"
         android:padding="16dp"
+        android:maxLength="10"
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"

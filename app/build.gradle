@@ -51,8 +51,5 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.7.0"
 
 
-
-
-
 //    implementation 'com.android.support:appcompat-v7:28.+'
 }

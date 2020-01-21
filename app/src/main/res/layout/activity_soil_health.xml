@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_1"
+    android:background="@drawable/bg"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".views.activities.Dashboard">
@@ -36,29 +36,30 @@
         android:padding="14dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="160dp"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/weather"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:id="@+id/request"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:background="@drawable/btn"
+                android:background="@drawable/btn_border"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:layout_marginTop="20dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/login_form_details"
                 android:text="Request for New Soil Health Card" />
 
             <Button
-                android:id="@+id/tutorial"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:id="@+id/upload"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:textAllCaps="false"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="50dp"
@@ -66,7 +67,7 @@
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="@color/login_form_details"
-                android:background="@drawable/btn"
+                android:background="@drawable/btn_border"
                 android:text="Upload Soil Health Card" />
 
             </LinearLayout>
