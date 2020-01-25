@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">एग्रोमित्र</string>
     <string name="welcome_page">स्वागत हे</string>
+    <string name="logout_home">Logout</string>
+    <string name="username_home">Username</string>
     <string name="component_Soil">मिट्टी स्वास्थ्य पत्र</string>
     <string name="component_Weather">मौसम</string>
     <string name="component_Feedback">प्रतिक्रिया</string>

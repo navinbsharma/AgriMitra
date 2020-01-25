@@ -10,6 +10,12 @@ public class FarmerLogin {
     @SerializedName("code")
     private String code;
 
+    @SerializedName("_id")
+    private String id;
+
+    @SerializedName("name")
+    private String name;
+
     public String getStatus() {
         return status;
     }
@@ -17,5 +23,7 @@ public class FarmerLogin {
     public String getCode() {
         return code;
     }
+    public String getId(){ return id;}
+    public String getName(){ return name;}
 
 }
