@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.17.20.35:3000")
+                .baseUrl("https://cryptic-shelf-53020.herokuapp.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

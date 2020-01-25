@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".views.activities.WeatherForecastActivity"></activity>
-        <activity android:name=".views.activities.WeatherShowForecasat" />
+<!--        <activity android:name=".views.activities.WeatherShowForecasat" />-->
         <activity android:name=".views.activities.WeatherShowActivity" />
         <activity android:name=".views.activities.QueryChattingActivity" />
         <activity
@@ -24,11 +24,7 @@
         <activity
             android:name=".views.activities.Dashboard"
             android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".views.activities.Signup"
@@ -36,8 +32,15 @@
         <activity
             android:name=".views.activities.SplashScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".views.activities.LocationGetter" />
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>>
+<!--        <activity android:name=".views.activities.LocationGetter" />-->
         <activity android:name=".views.activities.MarketActivity" />
         <activity
             android:name=".views.activities.FeedbackActivity"
@@ -45,9 +48,9 @@
         <activity
             android:name=".views.activities.SoilHealthActivity"
             android:label="@string/component_Soil" />
-        <activity
-            android:name=".views.activities.QueryActivity"
-            android:label="@string/component_Query" />
+<!--        <activity-->
+<!--            android:name=".views.activities.QueryActivity"-->
+<!--            android:label="@string/component_Query" />-->
     </application>
 
 </manifest>

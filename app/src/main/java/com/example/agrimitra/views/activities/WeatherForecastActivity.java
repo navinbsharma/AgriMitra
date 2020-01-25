@@ -42,8 +42,8 @@ public class WeatherForecastActivity extends AppCompatActivity {
     LocationListener mLocationListener;
 
 
-    String latitude="122";
-    String longitude="122";
+    float latitude=108;
+    float longitude=72;
 
 
 
@@ -66,8 +66,8 @@ public class WeatherForecastActivity extends AppCompatActivity {
                 @Override
                 public void onLocationChanged(Location location) {
                     Log.d("agromitra", "onLocationChanged: ");
-                    latitude = String.valueOf(location.getLatitude());
-                    longitude = String.valueOf(location.getLongitude());
+                    latitude = Float.valueOf(String.valueOf(location.getLatitude()));
+                    longitude = Float.valueOf(String.valueOf(location.getLongitude()));
 
                     Log.d("AgroMitra", "onLocationChanged: " + latitude + "" + longitude);
 
@@ -114,20 +114,22 @@ public class WeatherForecastActivity extends AppCompatActivity {
                 .baseUrl(WeatherForecastApi.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        latitude = getLatitude();
-        longitude = getLongitude();
+        //latitude = getLatitude();
+
+        //longitude = getLongitude();
 
 
         WeatherForecastApi weatherForecastApi = retrofit.create(WeatherForecastApi.class);
-        Call<Weather> call = weatherForecastApi.getWeather(latitude,longitude,5,APP_ID);
-        //= weatherForecastApi.getWeather(APP_ID,latitude,longitude);
+        Call<Weather> call = weatherForecastApi.getWeather();
+        //= weatherForecastApi.getWeather(latitude,longitude,10,APP_ID);
 
         call.enqueue(new Callback<Weather>() {
             @Override
             public void onResponse(Call<Weather> call, Response<Weather> response) {
+                Log.d("WeatherForecastDone", "onResponse: "+response.body());
                 Weather weather = response.body();
                 WeatherCity weatherCity = weather.getCity();
-                Log.d("WeatherForecastDone", "onResponse: "+weatherCity.getCityName());
+                updateCityDetails(weatherCity);
             }
 
             @Override
@@ -140,12 +142,16 @@ public class WeatherForecastActivity extends AppCompatActivity {
 
     }
 
-    public String getLatitude() {
+    public float getLatitude() {
         return latitude;
     }
 
-    public String getLongitude() {
+    public float getLongitude() {
         return longitude;
+    }
+
+    private void updateCityDetails(WeatherCity city){
+
     }
 
 }
