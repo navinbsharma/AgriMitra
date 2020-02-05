@@ -25,6 +25,11 @@
             android:name=".views.activities.Dashboard"
             android:theme="@style/AppTheme">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -44,11 +49,7 @@
         <activity
             android:name=".views.activities.SoilHealthActivity"
             android:label="@string/component_Soil" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
 
         <activity
