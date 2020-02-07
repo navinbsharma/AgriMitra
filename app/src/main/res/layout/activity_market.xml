@@ -12,7 +12,7 @@
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/textGrid"
@@ -24,36 +24,128 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="180dp">
+        android:layout_width="346dp"
+        android:layout_height="501dp"
 
+        android:layout_marginTop="160dp"
+        android:background="@drawable/request_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/country_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="15dp"
+            android:text="Country India"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:text="State"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
 
         <Spinner
-            android:id="@+id/sipnner_state"
-            android:layout_width="wrap_content"
+            android:id="@+id/select_state"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/states">
-        </Spinner>
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/spinner_bg" />
+
+        <TextView
+            android:id="@+id/district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:text="District"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
 
         <Spinner
-            android:id="@+id/spinner_city"
-            android:layout_width="wrap_content"
+            android:id="@+id/select_district"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/Andra_Pradesh" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="20dp" />
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/spinner_bg" />
+
+        <TextView
+            android:id="@+id/crop_categoery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:text="Crop Categoery"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_categoery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/spinner_bg" />
+
+        <TextView
+            android:id="@+id/crop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:text="Crop"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_crop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/spinner_bg" />
+
+        <TextView
+            android:id="@+id/market"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:text="Servey No."
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_market"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/spinner_bg" />
+
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="Submit"
-            android:background="@drawable/box">
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/go_btn"
+            android:gravity="center">
 
         </Button>
 

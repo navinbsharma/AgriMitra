@@ -6,9 +6,126 @@
     tools:context=".views.fragments.RequestNewCard">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:layout_width="372dp"
+        android:layout_height="570dp"
+        android:layout_gravity="center"
+        android:background="@drawable/request_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/country_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:text="Country India"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:text="State"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_bg"/>
+        <TextView
+            android:id="@+id/district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:text="District"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/spinner_bg"/>
+
+        <TextView
+            android:id="@+id/block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:text="Block"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_bg"/>
+
+        <TextView
+            android:id="@+id/panchayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:text="Panchayat"
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_panchayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_bg"/>
+        <TextView
+            android:id="@+id/survey_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:text="Servey No."
+            android:textColor="@color/btn_txt"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/select_survey_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_bg"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/go_btn"
+            android:gravity="center">
+
+        </Button>
+    </LinearLayout>
 
 </FrameLayout>
