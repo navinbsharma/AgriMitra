@@ -42,7 +42,8 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://cryptic-shelf-53020.herokuapp.com")
+                //.baseUrl("https://cryptic-shelf-53020.herokuapp.com")
+                .baseUrl("http://172.17.20.35:3000")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         FarmerSignupApi signupApi = retrofit.create(FarmerSignupApi.class);
