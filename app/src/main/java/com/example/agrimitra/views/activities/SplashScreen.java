@@ -14,6 +14,7 @@ import com.example.agrimitra.R;
 
 public class SplashScreen extends AppCompatActivity {
     String id;
+    public static String APP_USERNAME = "username";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 SharedPreferences sharedpreferences = getSharedPreferences(Login.MyPREFERENCES, Context.MODE_PRIVATE);
                 id = sharedpreferences.getString("id", null);
+                APP_USERNAME = sharedpreferences.getString("name", null);
                 Log.d("Shareprefrences", "run: "+id);
                 if (id == null) {
                     Intent intent = new Intent(SplashScreen.this, Login.class);

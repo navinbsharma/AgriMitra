@@ -1,5 +1,6 @@
 package com.example.agrimitra.views.models;
 
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.agrimitra.R;
+import com.example.agrimitra.views.activities.SplashScreen;
 
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
 
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    protected class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         LinearLayout linearLayout;
         TextView message;
@@ -51,15 +53,14 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
     public void onBindViewHolder(@NonNull ChatBoxAdapter.MyViewHolder holder, int position) {
 
 
-
-
         Message m = MessageList.get(position);
-        username = m.getName().toString();
-        Log.d("onBindViewHolder", "onBindViewHolder: "+MainActivity.NICKNAME);
+        username = m.getName();
+
+        Log.d("onBindViewHolder", "onBindViewHolder: "+ SplashScreen.APP_USERNAME);
 
 
 
-        if(username.equals(MainActivity.NICKNAME)){
+        if(username.equals(SplashScreen.APP_USERNAME)){
             ownMessage(holder);
         }
         else{
@@ -75,14 +76,14 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
         return MessageList.size();
     }
 
-    public void ownMessage(MyViewHolder holder){
+    private void ownMessage(MyViewHolder holder){
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.linearLayout.getLayoutParams();
         params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         holder.itemView.setLayoutParams(params);
 
 
     }
-    public void expertMessage(MyViewHolder holder){
+    private void expertMessage(MyViewHolder holder){
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.linearLayout.getLayoutParams();
         params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         holder.itemView.setLayoutParams(params);
