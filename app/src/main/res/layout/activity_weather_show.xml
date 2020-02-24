@@ -7,6 +7,7 @@
     android:background="@drawable/bg_gradient"
     android:orientation="vertical"
     android:padding="25dp"
+    android:scrollbars="none"
     tools:context=".views.activities.WeatherShowActivity">
 
     <LinearLayout
@@ -333,6 +334,287 @@
             </LinearLayout>
 
         </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#3CF1EBF1"
+
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:textSize="12dp"
+            android:layout_weight="1"
+            android:layout_gravity="start"/>
+
+
+
+
+        <TextView
+            android:id="@+id/extra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="06:40 AM"
+            android:textSize="14dp"
+            android:gravity="end"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/forecast2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"/>
+
+
+
+
+                    <TextView
+                        android:id="@+id/extra2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="06:40 AM"
+                        android:textSize="14dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/forecast3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"/>
+
+
+
+
+                    <TextView
+                        android:id="@+id/extra3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="06:40 AM"
+                        android:textSize="14dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/forecast4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"/>
+
+
+
+
+                    <TextView
+                        android:id="@+id/extra4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="06:40 AM"
+                        android:textSize="14dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/forecast5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"/>
+
+
+
+
+                    <TextView
+                        android:id="@+id/extra5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="06:40 AM"
+                        android:textSize="14dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/forecast6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"/>
+
+
+
+
+                    <TextView
+                        android:id="@+id/extra6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="06:40 AM"
+                        android:textSize="14dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
 
     </LinearLayout>
 

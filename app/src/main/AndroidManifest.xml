@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/app_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.activities.ViewSoilCard"></activity>
+        <activity android:name=".views.activities.ViewSoilCard"
+            android:theme="@style/AppTheme2">
+
+        </activity>
         <activity
             android:name=".views.activities.RequestNewCard"
             android:theme="@style/AppTheme2">
@@ -23,6 +26,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".SoilCardTab" />
         <activity
@@ -31,7 +35,9 @@
         <activity
             android:name=".views.activities.Upload_soil_card"
             android:label="Upload Soil Health Card" />
-        <activity android:name=".views.activities.WeatherShowActivity" />
+        <activity android:name=".views.activities.WeatherShowActivity" >
+
+        </activity>
         <activity android:name=".views.activities.QueryChattingActivity" />
         <activity
             android:name=".views.activities.Login"

@@ -12,5 +12,6 @@ public class ViewSoilCard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_soil_card);
+        setTitle("View Soil Health Card");
     }
 }
