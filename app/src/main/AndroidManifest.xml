@@ -14,11 +14,23 @@
         android:roundIcon="@mipmap/app_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.activities.Market_list"></activity>
+        <activity android:name=".views.activities.ViewSoilCard"></activity>
+        <activity
+            android:name=".views.activities.RequestNewCard"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SoilCardTab" />
+        <activity
+            android:name=".views.activities.Market_list"
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".views.activities.Upload_soil_card"
-            android:label="Upload Soil Health Card"
-            android:theme="@style/AppTheme2"></activity>
+            android:label="Upload Soil Health Card" />
         <activity android:name=".views.activities.WeatherShowActivity" />
         <activity android:name=".views.activities.QueryChattingActivity" />
         <activity
@@ -26,7 +38,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".views.activities.Dashboard"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".views.activities.Signup"
             android:theme="@style/AppTheme" /> <!-- <activity android:name=".Login" /> -->
@@ -35,19 +47,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity android:name=".views.activities.LocationGetter" />
-        <activity android:name=".views.activities.MarketActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".views.activities.MarketActivity" />
         <activity
             android:name=".views.activities.FeedbackActivity"
             android:label="@string/component_Feedback" />
         <activity
             android:name=".views.activities.SoilHealthActivity"
-            android:label="@string/component_Soil" />
+            android:label="@string/component_Soil"></activity>
         <activity
             android:name=".views.activities.QueryActivity"
             android:label="@string/component_Query" />

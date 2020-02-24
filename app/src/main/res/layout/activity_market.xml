@@ -119,26 +119,9 @@
             android:layout_marginRight="6dp"
             android:background="@drawable/spinner_bg" />
 
-        <TextView
-            android:id="@+id/market"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="10dp"
-            android:text="Servey No."
-            android:textColor="@color/btn_txt"
-            android:textSize="17dp" />
-
-        <Spinner
-            android:id="@+id/select_market"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="6dp"
-            android:background="@drawable/spinner_bg" />
 
         <Button
+            android:id="@+id/go_btn"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:layout_marginLeft="30dp"
