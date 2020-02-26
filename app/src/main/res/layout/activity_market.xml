@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="25dp"
     android:background="@drawable/bg_1"
-    tools:context=".views.activities.MarketActivity">
+    tools:context=".views.activities.market.MarketActivity">
 
     <RelativeLayout
         android:layout_weight="2"

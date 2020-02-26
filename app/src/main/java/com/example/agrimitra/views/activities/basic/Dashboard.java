@@ -1,4 +1,4 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.basic;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,16 +8,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.agrimitra.R;
-import com.example.agrimitra.views.models.WeatherForecast;
+import com.example.agrimitra.views.activities.soil.SoilHealthActivity;
+import com.example.agrimitra.views.activities.tutorial.Tutorials;
+import com.example.agrimitra.views.activities.chatting.ChatActivity;
+import com.example.agrimitra.views.activities.feedback.FeedbackActivity;
+import com.example.agrimitra.views.activities.market.MarketActivity;
+import com.example.agrimitra.views.activities.weather.WeatherForecastActivity;
 
-import static com.example.agrimitra.views.activities.Login.MyPREFERENCES;
+import static com.example.agrimitra.views.activities.basic.Login.MyPREFERENCES;
 
 public class Dashboard extends AppCompatActivity {
     SharedPreferences sharedPreferences;

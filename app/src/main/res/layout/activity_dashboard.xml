@@ -7,7 +7,7 @@
     android:background="@drawable/bg"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".views.activities.Dashboard">
+    tools:context=".views.activities.basic.Dashboard">
 
     <RelativeLayout
         android:layout_weight="2"
@@ -15,17 +15,37 @@
         android:layout_height="0dp">
 
         <TextView
-            android:id="@+id/textGrid_dashboard"
+            android:id="@+id/logoutGrid"
+            android:text="@string/logout_home"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textGrid"
             android:text="@string/welcome_page"
             android:textStyle="bold"
-            android:textSize="35sp"
+            android:textSize="30sp"
             android:textColor="@android:color/white"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/userNameGrid"
+            android:text="@string/username_home"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textGrid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <GridLayout
-        android:id="@+id/mainGrid_dashboard"
+        android:id="@+id/mainGrid"
         android:columnCount="2"
         android:rowCount="3"
         android:alignmentMode="alignMargins"

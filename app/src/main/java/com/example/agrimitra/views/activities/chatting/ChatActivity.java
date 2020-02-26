@@ -1,4 +1,4 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.chatting;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.agrimitra.R;
+import com.example.agrimitra.views.activities.basic.Login;
 import com.example.agrimitra.views.models.ChatBoxAdapter;
 import com.example.agrimitra.views.models.Message;
 import com.github.nkzawa.emitter.Emitter;
@@ -51,7 +52,7 @@ public class ChatActivity extends AppCompatActivity {
         messageTxt = findViewById(R.id.message);
         send = findViewById(R.id.send);
         messageList = new ArrayList<>();
-        recyclerView = findViewById(R.id.messagelist);
+        recyclerView = findViewById(R.id.recycler_message_list);
         sharedpreferences = getSharedPreferences(Login.MyPREFERENCES, Context.MODE_PRIVATE);
 
         // nickname = (String) getIntent().getExtras().getString(MainActivity.NICKNAME);

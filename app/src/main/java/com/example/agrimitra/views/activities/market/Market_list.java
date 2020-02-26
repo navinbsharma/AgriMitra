@@ -1,4 +1,4 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.market;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.agrimitra.R;
 
-public class MarketReportActivity extends AppCompatActivity {
+public class Market_list extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_market_report);
+        setContentView(R.layout.activity_market_list);
     }
 }

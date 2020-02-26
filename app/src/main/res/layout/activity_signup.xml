@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_login"
-    tools:context=".views.activities.Signup">
+    tools:context=".views.activities.basic.Signup">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -88,7 +88,6 @@
         android:hint="@string/mpin"
         android:inputType="numberPassword"
         android:padding="16dp"
-        android:maxLength="10"
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"

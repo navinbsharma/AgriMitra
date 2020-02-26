@@ -9,7 +9,7 @@
         android:background="@drawable/bg"
         android:orientation="vertical"
         android:weightSum="10"
-        tools:context=".views.activities.Dashboard">
+        tools:context=".views.activities.basic.Dashboard">
 
         <RelativeLayout
             android:layout_width="match_parent"

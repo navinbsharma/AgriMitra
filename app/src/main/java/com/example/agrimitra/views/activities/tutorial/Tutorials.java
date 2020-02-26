@@ -1,4 +1,4 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.tutorial;
 
 import androidx.appcompat.app.AppCompatActivity;
 

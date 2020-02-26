@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="25dp"
     android:scrollbars="none"
-    tools:context=".views.activities.WeatherShowActivity">
+    tools:context=".views.activities.weather.WeatherShowActivity">
 
     <LinearLayout
         android:id="@+id/mainContainer"

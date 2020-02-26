@@ -1,4 +1,4 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.weather;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

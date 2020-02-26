@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient"
     android:padding="25dp"
-    tools:context=".views.activities.WeatherShowActivity">
+    tools:context=".views.activities.weather.WeatherShowActivity">
 
 
     <RelativeLayout

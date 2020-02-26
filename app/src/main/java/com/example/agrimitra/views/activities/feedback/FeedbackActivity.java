@@ -1,9 +1,8 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.feedback;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.example.agrimitra.R;

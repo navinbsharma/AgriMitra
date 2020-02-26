@@ -8,6 +8,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 
 public interface FarmerSignupApi {
@@ -18,5 +19,5 @@ public interface FarmerSignupApi {
 
     @FormUrlEncoded
     @POST("/register_farmer")
-    Call<FarmerSignup>  register(@Field("fname") String name, @Field("mobileNo") String mobile, @Field("mpin") String mpin, @Field("adharNo") String adhar);
+    Call<FarmerSignup>  register(@Query("fname") String name, @Query("mobileNo") String mobile, @Query("mpin") String mpin, @Query("adharNo") String adhar);
 }

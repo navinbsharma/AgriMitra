@@ -1,4 +1,4 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.basic;
 
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
@@ -10,7 +10,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,10 +17,6 @@ import android.widget.Toast;
 import com.example.agrimitra.R;
 import com.example.agrimitra.views.Retrofit.FarmerSignup;
 import com.example.agrimitra.views.Retrofit.FarmerSignupApi;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Signup extends AppCompatActivity {
 

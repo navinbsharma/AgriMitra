@@ -1,4 +1,4 @@
-package com.example.agrimitra.views.activities;
+package com.example.agrimitra.views.activities.basic;
 
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
@@ -22,10 +22,6 @@ import android.widget.Toast;
 import com.example.agrimitra.R;
 import com.example.agrimitra.views.Retrofit.FarmerLogin;
 import com.example.agrimitra.views.Retrofit.FarmerLoginAPi;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Login extends AppCompatActivity {
     public static final String MyPREFERENCES = "MyPrefs";

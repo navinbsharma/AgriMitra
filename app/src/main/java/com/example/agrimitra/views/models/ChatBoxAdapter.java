@@ -1,6 +1,5 @@
 package com.example.agrimitra.views.models;
 
-import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.agrimitra.R;
-import com.example.agrimitra.views.activities.SplashScreen;
+import com.example.agrimitra.views.activities.basic.SplashScreen;
 
 import java.util.List;
 
