@@ -3,9 +3,12 @@ package com.example.agrimitra.views.activities;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,7 +17,10 @@ import android.widget.Toast;
 import com.example.agrimitra.R;
 import com.example.agrimitra.views.models.WeatherForecast;
 
+import static com.example.agrimitra.views.activities.Login.MyPREFERENCES;
+
 public class Dashboard extends AppCompatActivity {
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,7 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         //Remove title bar
+        sharedPreferences = getSharedPreferences(MyPREFERENCES,Context.MODE_PRIVATE);
 
 
         ImageView query = findViewById(R.id.query);
@@ -31,11 +38,13 @@ public class Dashboard extends AppCompatActivity {
         ImageView market = findViewById(R.id.market);
         ImageView tutorial = findViewById(R.id.tutorial);
         TextView logoutView = findViewById(R.id.logoutGrid);
+        TextView username = findViewById(R.id.userNameGrid);
+        username.setText(sharedPreferences.getString("name",null));
 
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this, QueryChattingActivity.class);
+                Intent intent = new Intent(Dashboard.this, ChatActivity.class);
                 startActivity(intent);
             }
         });
@@ -94,7 +103,16 @@ public class Dashboard extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
-                        Toast.makeText(Dashboard.this, "You clicked yes button", Toast.LENGTH_LONG).show();
+
+                        SharedPreferences sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+                        SharedPreferences.Editor shEdit = sharedPreferences.edit();
+
+                        shEdit.clear();
+                        shEdit.apply();
+                        Intent i = new Intent(Dashboard.this,Login.class);
+                        startActivity(i);
+                        finish();
+
                     }
                 });
 
