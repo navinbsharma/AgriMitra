@@ -61,9 +61,9 @@ public class ChatActivity extends AppCompatActivity {
 
 
         try {
-            socket = IO.socket("http://10.0.2.2:3000");
+            socket = IO.socket("https://cryptic-shelf-53020.herokuapp.com");
             socket.connect();
-            socket.emit("india", nickname);
+            socket.emit("join", nickname);
 
 
         } catch (Exception e) {

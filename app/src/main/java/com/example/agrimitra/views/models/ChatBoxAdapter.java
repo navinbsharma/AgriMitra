@@ -66,7 +66,7 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
         else{
             expertMessage(holder);
         }
-        holder.name.setText(m.getName());
+        holder.name.setText(m.getName()+" : ");
         holder.message.setText(m.getMessage());
 
     }
@@ -89,6 +89,4 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
         holder.itemView.setLayoutParams(params);
 
     }
-
-
 }
