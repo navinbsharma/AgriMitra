@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">AgroMitra</string>
     <string name="welcome_page">Welcome</string>
+    <string name="logout_home">Logout</string>
+    <string name="username_home">Username</string>
     <string name="component_Soil">Soil Health Card</string>
     <string name="component_Weather">Weather</string>
     <string name="component_Feedback">Feedback</string>

@@ -47,7 +47,8 @@
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/icon" />
+        app:layout_constraintTop_toBottomOf="@+id/icon"
+        android:inputType="textPersonName"/>
 
     <EditText
         android:id="@+id/signup_mobile"
@@ -60,7 +61,8 @@
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/signup_username" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_username"
+        android:inputType="phone"/>
 
     <EditText
         android:id="@+id/signup_adhar"
@@ -73,7 +75,9 @@
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/signup_mobile" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_mobile"
+        android:inputType="number"
+        android:maxLength="12"/>
 
     <EditText
         android:id="@+id/signup_mpin"
@@ -88,7 +92,8 @@
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/signup_adhar" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_adhar"
+        android:maxLength="4"/>
 
     <EditText
         android:id="@+id/signup_confirm_pin"
@@ -102,7 +107,8 @@
         android:textColorHint="@color/login_form_details"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/signup_mpin" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_mpin"
+        android:maxLength="4"/>
     <Button
         android:id="@+id/btn_signup"
         android:layout_width="0dp"
