@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.agrimitra">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -14,46 +15,49 @@
         android:roundIcon="@mipmap/app_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.activities.weather.WeatherShowActivity"></activity>
-        <activity android:name=".views.activities.chatting.QueryChattingActivity" />
-        <activity
-            android:name=".views.activities.basic.Login"
-            android:theme="@style/AppTheme">
-
-        </activity>
         <activity
             android:name=".views.activities.basic.Dashboard"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
+        <activity
+            android:name=".views.activities.basic.Login"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".views.activities.basic.Signup"
-            android:theme="@style/AppTheme" /> <!-- <activity android:name=".Login" /> -->
+            android:theme="@style/AppTheme" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".views.activities.basic.SplashScreen"
-            android:theme="@style/AppTheme">
-
-
-
-        </activity>
-        <activity android:name=".views.activities.LocationGetter" />
-        <activity android:name=".views.activities.market.MarketActivity" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".views.activities.chatting.ChatActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".views.activities.chatting.QueryChattingActivity"
+            android:label="@string/component_Query" />
         <activity
             android:name=".views.activities.feedback.FeedbackActivity"
             android:label="@string/component_Feedback" />
         <activity
+            android:name=".views.activities.market.Market_list"
+            android:label="@string/component_Market_list" />
+        <activity android:name=".views.activities.market.MarketActivity" />
+        <activity android:name=".views.activities.market.MarketReportActivity" />
+        <activity
             android:name=".views.activities.soil.SoilHealthActivity"
             android:label="@string/component_Soil" />
-        <activity
-            android:name=".views.activities.QueryActivity"
-            android:label="@string/component_Query" />
+        <activity android:name=".views.activities.soil.RequestNewCard"/>
+        <activity android:name=".views.activities.soil.Upload_soil_card"/>
+        <activity android:name=".views.activities.soil.ViewSoilCard"/>
+        <activity android:name=".views.activities.tutorial.Tutorials"/>
+        <activity android:name=".views.activities.weather.WeatherShowActivity"></activity>
+
     </application>
 
 </manifest>
+
+

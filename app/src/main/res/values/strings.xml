@@ -40,6 +40,7 @@
     <string name="feeback_experince">What is your opinion about our work??</string>
     <string name="feedback_category">Please select your feedback categoery below</string>
     <string name="feedback">Please leave your feedback below</string>
+    <string name="component_Market_list">Market List</string>
 
     <string-array name="states">
         <item>Select State</item>
