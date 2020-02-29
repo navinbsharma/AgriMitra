@@ -70,8 +70,8 @@ public class Signup extends AppCompatActivity {
                         if(response.code()==200 && response.isSuccessful() ){
                             Log.d("AgroMitra", "onClick: Done registration");
                             Toast.makeText(Signup.this,"Success"+response.code(),Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(Signup.this , Login.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(Signup.this , Login.class);
+//                            startActivity(intent);
                         }
                         else{
                             Log.d("AgroMitra", "onClick: Done registration");

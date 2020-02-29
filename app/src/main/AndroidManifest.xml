@@ -47,8 +47,9 @@
             android:theme="@style/AppTheme" /> <!-- <activity android:name=".Login" /> -->
         <activity
             android:name=".views.activities.SplashScreen"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+<!--            android:screenOrientation="portrait"-->
+
         <activity android:name=".views.activities.LocationGetter" />
         <activity android:name=".views.activities.MarketActivity" />
         <activity
