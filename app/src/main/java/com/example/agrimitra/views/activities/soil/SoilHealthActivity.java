@@ -22,14 +22,25 @@ public class SoilHealthActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),RequestNewCard.class);
                 startActivity(i);
+            }
 
+
+        });
+        soilHealthBinding.upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent a = new Intent(getApplicationContext(),Upload_soil_card.class);
                 startActivity(a);
             }
-
-            
         });
 
+        soilHealthBinding.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent k = new Intent(getApplicationContext(),Upload_soil_card.class);
+                startActivity(k);
+            }
+        });
 
 
     }
