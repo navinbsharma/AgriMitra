@@ -96,29 +96,22 @@ public class Login extends AppCompatActivity {
                                             Toast.makeText(Login.this, response.body().getStatus(), Toast.LENGTH_LONG).show();
                                             setPrefrences(response.body().getId(),response.body().getName());
                                             Intent intent = new Intent(Login.this, Dashboard.class);
-
                                             startActivity(intent);
                                         } else if (code == 303) {
                                             Toast.makeText(Login.this, response.body().getStatus(), Toast.LENGTH_LONG).show();
-
                                         } else if (code == 301) {
                                             Toast.makeText(Login.this, response.body().getStatus(), Toast.LENGTH_LONG).show();
                                         }
-
                                         Log.d("Agromitra", "onResponse:" + code);
                                     }
-
                                 }
-
                                 @Override
                                 public void onFailure(Call<FarmerLogin> call, Throwable t) {
                                     dialog.dismiss();
-
                                 }
                             });
                         }
                     }
-
                 });
             }
         });

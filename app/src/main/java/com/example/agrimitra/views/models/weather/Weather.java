@@ -1,5 +1,7 @@
 package com.example.agrimitra.views.models.weather;
 
+import android.util.Log;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,7 +23,8 @@ public class Weather implements Serializable {
     @Expose
     private WeatherCity city;
 
-    public Weather(Integer cnt, List<WeatherList> list, WeatherCity city) {
+    public Weather(Integer cnt, List<WeatherList> list, WeatherCity city){
+        Log.d("WeatherChecking", "Weather: "+city.getCityName());
         this.cnt = cnt;
         this.list = list;
         this.city = city;

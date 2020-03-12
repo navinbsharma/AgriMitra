@@ -26,7 +26,6 @@ import com.example.agrimitra.views.models.weather.Weather;
 import com.example.agrimitra.views.models.weather.WeatherCity;
 import com.loopj.android.http.RequestParams;
 
-
 public class WeatherForecastActivity extends AppCompatActivity {
     int REQUEST_CODE = 123;
     final String APP_ID = "5c415791a04f2360930c239462e1e491";
@@ -42,8 +41,8 @@ public class WeatherForecastActivity extends AppCompatActivity {
     LocationListener mLocationListener;
 
 
-    float latitude=108;
-    float longitude=72;
+    String latitude="35";
+    String longitude="72";
 
 
 
@@ -55,7 +54,7 @@ public class WeatherForecastActivity extends AppCompatActivity {
     }
     // TODO: Add getWeatherForCurrentLocation() here:
     private void getWeatherForCurrentLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
 
         } else {
@@ -66,16 +65,10 @@ public class WeatherForecastActivity extends AppCompatActivity {
                 @Override
                 public void onLocationChanged(Location location) {
                     Log.d("agromitra", "onLocationChanged: ");
-                    latitude = Float.valueOf(String.valueOf(location.getLatitude()));
-                    longitude = Float.valueOf(String.valueOf(location.getLongitude()));
+                    latitude = String.valueOf(location.getLatitude());
+                    longitude = String.valueOf(location.getLongitude());
 
                     Log.d("AgroMitra", "onLocationChanged: " + latitude + "" + longitude);
-
-                    //RequestParams params = new RequestParams();
-                    //params.put("lat", latitude);
-                    //params.put("lon", longitude);
-                    //params.put("appid", APP_ID);
-                    //letsDoSomeNetworking(params);
 
                 }
 
@@ -114,14 +107,14 @@ public class WeatherForecastActivity extends AppCompatActivity {
                 .baseUrl(WeatherForecastApi.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        //latitude = getLatitude();
+        latitude = getLatitude();
 
-        //longitude = getLongitude();
+        longitude = getLongitude();
 
 
         WeatherForecastApi weatherForecastApi = retrofit.create(WeatherForecastApi.class);
-        Call<Weather> call = weatherForecastApi.getWeather();
-        //= weatherForecastApi.getWeather(latitude,longitude,10,APP_ID);
+        Call<Weather> call = weatherForecastApi.getWeather(latitude,longitude,10,APP_ID);
+        //=  weatherForecastApi.getWeather(latitude,longitude,10,APP_ID);
 
         call.enqueue(new Callback<Weather>() {
             @Override
@@ -129,6 +122,7 @@ public class WeatherForecastActivity extends AppCompatActivity {
                 Log.d("WeatherForecastDone", "onResponse: "+response.body());
                 Weather weather = response.body();
                 WeatherCity weatherCity = weather.getCity();
+                Log.d("WeatherForecastDone", "onResponse: "+weatherCity.getCityName());
                 updateCityDetails(weatherCity);
             }
 
@@ -142,11 +136,11 @@ public class WeatherForecastActivity extends AppCompatActivity {
 
     }
 
-    public float getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public float getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 

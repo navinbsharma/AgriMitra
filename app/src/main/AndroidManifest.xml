@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.agrimitra">
 
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,17 +21,19 @@
         android:roundIcon="@mipmap/app_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".views.activities.chatting.ImageSelectActivity"></activity>
         <activity
             android:name=".views.activities.basic.Dashboard"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".views.activities.basic.Login"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".views.activities.basic.Signup"
             android:theme="@style/AppTheme" />
@@ -34,8 +42,9 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".views.activities.chatting.ChatActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".views.activities.chatting.ChatActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".views.activities.chatting.QueryChattingActivity"
             android:label="@string/component_Query" />
@@ -50,14 +59,23 @@
         <activity
             android:name=".views.activities.soil.SoilHealthActivity"
             android:label="@string/component_Soil" />
-        <activity android:name=".views.activities.soil.RequestNewCard"/>
-        <activity android:name=".views.activities.soil.Upload_soil_card"/>
-        <activity android:name=".views.activities.soil.ViewSoilCard"/>
-        <activity android:name=".views.activities.tutorial.Tutorials"/>
-        <activity android:name=".views.activities.weather.WeatherShowActivity"></activity>
+        <activity android:name=".views.activities.soil.RequestNewCard" />
+        <activity android:name=".views.activities.soil.Upload_soil_card" />
+        <activity android:name=".views.activities.soil.ViewSoilCard" />
+        <activity android:name=".views.activities.tutorial.Tutorials" />
+        <activity android:name=".views.activities.weather.WeatherForecastActivity" />
+        <activity android:name=".views.activities.chatting.ChatOptionActivity" />
+        <activity android:name=".views.activities.chatting.WrittenQueryActivity" />
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.agrimitra.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
     </application>
 
 </manifest>
-
-

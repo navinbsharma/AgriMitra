@@ -42,9 +42,6 @@ public class ChatActivity extends AppCompatActivity {
     private Message m;
     SharedPreferences sharedpreferences;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,9 +68,6 @@ public class ChatActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
-
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -87,7 +81,6 @@ public class ChatActivity extends AppCompatActivity {
                 }
             }
         });
-
         socket.on("userdisconnect", new Emitter.Listener() {
             @Override
             public void call(final Object... args) {
@@ -100,9 +93,6 @@ public class ChatActivity extends AppCompatActivity {
                 });
             }
         });
-
-
-
         socket.on("message", new Emitter.Listener() {
             @Override
             public void call(final Object... args) {

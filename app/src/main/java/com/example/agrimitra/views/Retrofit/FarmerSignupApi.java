@@ -19,5 +19,5 @@ public interface FarmerSignupApi {
 
     @FormUrlEncoded
     @POST("/register_farmer")
-    Call<FarmerSignup>  register(@Query("fname") String name, @Query("mobileNo") String mobile, @Query("mpin") String mpin, @Query("adharNo") String adhar);
+    Call<FarmerSignup>  register(@Field("fname") String name, @Field("mobileNo") String mobile, @Field("mpin") String mpin, @Field("adharNo") String adhar);
 }

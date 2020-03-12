@@ -37,7 +37,7 @@ public class WeatherShowActivity extends AppCompatActivity {
 
     int REQUEST_CODE = 123;
     final String WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
-    final String WEATHER_URL1 = "https://api.openweathermap.org/data/2.5/forecast";
+
     // App ID to use OpenWeather data
     final String APP_ID = "5c415791a04f2360930c239462e1e491";
     // Time between location updates (5000 milliseconds or 5 seconds)
@@ -171,7 +171,7 @@ public class WeatherShowActivity extends AppCompatActivity {
     // TODO: Add letsDoSomeNetworking(RequestParams params) here:
     private void letsDoSomeNetworking(RequestParams params) {
         AsyncHttpClient client = new AsyncHttpClient();
-        AsyncHttpClient client1 = new AsyncHttpClient();
+
         client.get(WEATHER_URL, params, new JsonHttpResponseHandler() {
 
             @Override
@@ -189,23 +189,7 @@ public class WeatherShowActivity extends AppCompatActivity {
 
             }
         });
-        client1.get(WEATHER_URL1, params, new JsonHttpResponseHandler() {
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                Log.d("AgroMitra", "OnSuccess : OnSuccess");
-                Log.d("AgroMitra", "onSuccess: " + response.toString());
-
-                WeatherForecastDataModel weatherForecastData = WeatherForecastDataModel.fromJSON(response);
-                Log.d("WeatherForecast", "onSuccess: "+weatherForecastData.getCount());
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
-                Log.d("AgroMitra", "onFailure: " + e.toString());
-
-            }
-        });
     }
 
 

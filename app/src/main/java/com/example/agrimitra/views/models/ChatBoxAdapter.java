@@ -1,5 +1,7 @@
 package com.example.agrimitra.views.models;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,17 +14,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.agrimitra.R;
+import com.example.agrimitra.views.activities.basic.Dashboard;
 import com.example.agrimitra.views.activities.basic.SplashScreen;
 
 import java.util.List;
 
+import static com.example.agrimitra.views.activities.basic.Login.MyPREFERENCES;
+
 public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHolder> {
     private List<Message> MessageList;
     private String username;
-
-
-
-
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name;
@@ -30,7 +31,7 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
         TextView message;
         MyViewHolder(View view){
             super(view);
-            name = view.findViewById(R.id.nickname);
+            //name = view.findViewById(R.id.nickname);
             message = view.findViewById(R.id.message);
             linearLayout = view.findViewById(R.id.container_layout);
         }
@@ -52,20 +53,21 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
     public void onBindViewHolder(@NonNull ChatBoxAdapter.MyViewHolder holder, int position) {
 
 
+
         Message m = MessageList.get(position);
         username = m.getName();
 
-        Log.d("onBindViewHolder", "onBindViewHolder: "+ SplashScreen.APP_USERNAME);
+        Log.d("onBindViewHolder", "onBindViewHolder: "+ Dashboard.APP_USERNAME);
 
 
 
-        if(username.equals(SplashScreen.APP_USERNAME)){
+        if(username.equals(Dashboard.APP_USERNAME)){
             ownMessage(holder);
         }
         else{
             expertMessage(holder);
         }
-        holder.name.setText(m.getName()+" : ");
+        //holder.name.setText(m.getName()+" : ");
         holder.message.setText(m.getMessage());
 
     }
@@ -79,13 +81,11 @@ public class ChatBoxAdapter extends RecyclerView.Adapter<ChatBoxAdapter.MyViewHo
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.linearLayout.getLayoutParams();
         params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         holder.itemView.setLayoutParams(params);
-
-
     }
+
     private void expertMessage(MyViewHolder holder){
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.linearLayout.getLayoutParams();
         params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         holder.itemView.setLayoutParams(params);
-
     }
 }

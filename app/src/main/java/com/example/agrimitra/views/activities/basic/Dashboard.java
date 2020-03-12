@@ -13,17 +13,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.agrimitra.R;
+import com.example.agrimitra.views.activities.chatting.ChatOptionActivity;
 import com.example.agrimitra.views.activities.soil.SoilHealthActivity;
 import com.example.agrimitra.views.activities.tutorial.Tutorials;
 import com.example.agrimitra.views.activities.chatting.ChatActivity;
 import com.example.agrimitra.views.activities.feedback.FeedbackActivity;
 import com.example.agrimitra.views.activities.market.MarketActivity;
 import com.example.agrimitra.views.activities.weather.WeatherForecastActivity;
+import com.example.agrimitra.views.activities.weather.WeatherShowActivity;
 
 import static com.example.agrimitra.views.activities.basic.Login.MyPREFERENCES;
 
 public class Dashboard extends AppCompatActivity {
     SharedPreferences sharedPreferences;
+    public static String APP_USERNAME = "username";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +47,12 @@ public class Dashboard extends AppCompatActivity {
         TextView username = findViewById(R.id.userNameGrid);
         username.setText(sharedPreferences.getString("name",null));
 
+        APP_USERNAME = username.getText().toString();
+
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this, ChatActivity.class);
+                Intent intent = new Intent(Dashboard.this, ChatOptionActivity.class);
                 startActivity(intent);
             }
         });
