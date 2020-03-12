@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.agrimitra.views.fragments.ChatFragment;
-import com.example.agrimitra.views.fragments.StatusFragment;
+//import com.example.agrimitra.views.fragments.StatusFragment;
 
 public class TabsAccessorAdapter extends FragmentPagerAdapter {
 
@@ -22,8 +22,8 @@ public class TabsAccessorAdapter extends FragmentPagerAdapter {
         switch (position){
             case 0 : ChatFragment chatFragment = new ChatFragment();
                         return chatFragment;
-            case 1 : StatusFragment statusFragment = new StatusFragment();
-                return statusFragment;
+//            case 1 : StatusFragment statusFragment = new StatusFragment();
+//                return statusFragment;
 
         }
         return null;
