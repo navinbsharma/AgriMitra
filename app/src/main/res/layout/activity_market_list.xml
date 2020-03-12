@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.activities.Market_list"
+    tools:context=".views.activities.market.Market_list"
     android:id="@+id/market_recyclerview">
 
 <!--    <android.support.v7.widget.RecyclerView-->
@@ -13,6 +13,6 @@
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent">-->
 
-    </android.support.v7.widget.RecyclerView>
+<!--    </android.support.v7.widget.RecyclerView>-->
 
 </androidx.recyclerview.widget.RecyclerView>
