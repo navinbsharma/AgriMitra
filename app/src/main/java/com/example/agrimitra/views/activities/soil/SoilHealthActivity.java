@@ -37,7 +37,7 @@ public class SoilHealthActivity extends AppCompatActivity {
         soilHealthBinding.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent k = new Intent(getApplicationContext(),Upload_soil_card.class);
+                Intent k = new Intent(getApplicationContext(),ViewSoilCard.class);
                 startActivity(k);
             }
         });
