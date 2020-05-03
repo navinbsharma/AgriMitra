@@ -107,7 +107,6 @@ public class ChatOptionActivity extends AppCompatActivity implements View.OnClic
 
     private void openCamera() {
         if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            Log.d("PermissionGranted", "openCamera: ");
             requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
         } else {
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -122,12 +121,10 @@ public class ChatOptionActivity extends AppCompatActivity implements View.OnClic
                     Uri imageUri = FileProvider.getUriForFile(this, "com.example.agrimitra.fileprovider", imageFile);
                     cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
                     startActivityForResult(cameraIntent, CAMERA_REQUEST);
-
                 }
             }
             //startActivityForResult(cameraIntent, CAMERA_REQUEST);
         }
-
     }
 
     private File getFileName() throws IOException {

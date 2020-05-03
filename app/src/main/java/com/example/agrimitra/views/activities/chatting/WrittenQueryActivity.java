@@ -32,18 +32,36 @@ public class WrittenQueryActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-        subBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                spinner.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                // TODO Auto-generated method stub
+                String msupplier=spinner.getSelectedItem().toString();
+                Toast.makeText(WrittenQueryActivity.this, ""+msupplier, Toast.LENGTH_SHORT).show();
 
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Toast.makeText(WrittenQueryActivity.this, ""+parent.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
-                    }
-                });
+//                Log.e("Selected item : ",msupplier);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+
             }
         });
+
+//        subBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                spinner.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+//
+//                    @Override
+//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                        Toast.makeText(WrittenQueryActivity.this, ""+parent.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//            }
+//        });
     }
 }
